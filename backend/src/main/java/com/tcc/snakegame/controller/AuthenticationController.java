@@ -1,9 +1,9 @@
-package com.tcc.chatbot.controller;
+﻿package com.tcc.snakegame.controller;
 
-import com.tcc.chatbot.model.User;
-import com.tcc.chatbot.repository.UserRepository;
-import com.tcc.chatbot.util.JwtUtil;
-import com.tcc.chatbot.service.UserService;
+import com.tcc.snakegame.model.User;
+import com.tcc.snakegame.repository.UserRepository;
+import com.tcc.snakegame.util.JwtUtil;
+import com.tcc.snakegame.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -37,7 +37,7 @@ public class AuthenticationController {
                     new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
             );
         } catch (BadCredentialsException e) {
-            throw new Exception("Credenciais inválidas", e);
+            throw new Exception("Credenciais invÃ¡lidas", e);
         }
 
         final UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getUsername());
@@ -50,7 +50,7 @@ public class AuthenticationController {
         if (userRepository.findByUsername(authRequest.getUsername()) != null) {
             return ResponseEntity
                     .badRequest()
-                    .body("Erro: nome de usuário já existe!");
+                    .body("Erro: nome de usuÃ¡rio jÃ¡ existe!");
         }
 
         User user = new User();
@@ -60,7 +60,7 @@ public class AuthenticationController {
 
         userRepository.save(user);
 
-        return ResponseEntity.ok("Usuário registrado com sucesso.");
+        return ResponseEntity.ok("UsuÃ¡rio registrado com sucesso.");
     }
 
     public static class AuthRequest {
@@ -78,3 +78,4 @@ public class AuthenticationController {
         public String getToken() { return token; }
     }
 }
+

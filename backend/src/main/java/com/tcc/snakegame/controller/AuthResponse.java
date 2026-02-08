@@ -1,4 +1,4 @@
-package com.tcc.chatbot.controller;
+﻿package com.tcc.snakegame.controller;
 
 public class AuthResponse {
     private String jwt;
@@ -17,3 +17,4 @@ public class AuthResponse {
         this.jwt = jwt;
     }
 }
+

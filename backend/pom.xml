@@ -1,14 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tcc</groupId>
-    <artifactId>chatbot</artifactId>
+    <artifactId>snakegame</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Chatbot de Apoio Psicológico</name>
+    <name>SnakeGame de Apoio PsicolÃ³gico</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -103,3 +103,4 @@
         </plugins>
     </build>
 </project>
+

@@ -1,12 +1,12 @@
-services:
+﻿services:
   postgres:
     image: postgres:14
-    container_name: chatbot-db
+    container_name: snakegame-db
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: chatbot_db
+      POSTGRES_DB: snakegame_db
     ports:
       - "5432:5432"
     volumes:
@@ -20,7 +20,7 @@ services:
 
   backend:
     build: ./backend
-    container_name: chatbot-backend
+    container_name: snakegame-backend
     restart: unless-stopped
     ports:
       - "8080:8080"
@@ -28,14 +28,14 @@ services:
       - postgres
       - ollama
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/chatbot_db
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/snakegame_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       SPRING_AI_OLLAMA_BASE_URL: http://ollama:11434
 
   frontend:
-    build: ./frontend/chatbot-frontend
-    container_name: chatbot-frontend
+    build: ./frontend/snakegame-frontend
+    container_name: snakegame-frontend
     restart: unless-stopped
     ports:
       - "4200:80"
@@ -44,3 +44,4 @@ services:
 
 volumes:
   postgres-data:
+

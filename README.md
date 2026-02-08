@@ -33,21 +33,21 @@ Um jogo da cobrinha inspirado nos celulares Nokia clássicos, feito em Angular. 
 npm run build
 ```
 
-A saída fica em `dist/chatbot-frontend`.
+A saída fica em `dist/snakegame-frontend`.
 
 ## Deploy (site estático)
 
 ### Netlify
 
 1. Build command: `npm run build`
-2. Publish directory: `dist/chatbot-frontend`
+2. Publish directory: `dist/snakegame-frontend`
 3. Se publicar em subpasta, use `npm run build -- --base-href /sua-subpasta/`.
 
 ### Vercel
 
 1. Framework: Other
 2. Build command: `npm run build`
-3. Output directory: `dist/chatbot-frontend`
+3. Output directory: `dist/snakegame-frontend`
 4. Se publicar em subpasta, use `npm run build -- --base-href /sua-subpasta/`.
 
 ### GitHub Pages
@@ -56,7 +56,7 @@ A saída fica em `dist/chatbot-frontend`.
    ```bash
    npm run build -- --base-href /snakeGame/
    ```
-2. Publique o conteúdo de `dist/chatbot-frontend` no branch `gh-pages`.
+2. Publique o conteúdo de `dist/snakegame-frontend` no branch `gh-pages`.
 3. Em Settings > Pages, selecione o branch `gh-pages`.
 
 ### Firebase Hosting
@@ -69,7 +69,7 @@ A saída fica em `dist/chatbot-frontend`.
    ```bash
    firebase login
    ```
-3. Inicialize o hosting apontando para `dist/chatbot-frontend` e marque SPA:
+3. Inicialize o hosting apontando para `dist/snakegame-frontend` e marque SPA:
    ```bash
    firebase init hosting
    ```
@@ -91,3 +91,4 @@ A saída fica em `dist/chatbot-frontend`.
 ## Licença
 
 Uso livre para fins educacionais.
+

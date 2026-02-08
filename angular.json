@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+    "newProjectRoot": "projects",
   "projects": {
-    "chatbot-frontend": {
+    "snake-game": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/chatbot-frontend",
+            "outputPath": "dist/snake-game",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,13 +37,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "700kB",
+                  "maximumError": "1.5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "6kB"
                 }
               ],
               "outputHashing": "all"
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "chatbot-frontend:build:production"
+              "buildTarget": "snake-game:build:production"
             },
             "development": {
-              "buildTarget": "chatbot-frontend:build:development"
+              "buildTarget": "snake-game:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,3 +98,6 @@
     "analytics": "88352bae-4217-46ae-8515-c57a3a88dc4d"
   }
 }
+
+
+

@@ -1,9 +1,9 @@
-package com.tcc.chatbot.controller;
+﻿package com.tcc.snakegame.controller;
 
 
-import com.tcc.chatbot.dto.ChatRequest;
-import com.tcc.chatbot.dto.ChatResponse;
-import com.tcc.chatbot.service.GemmaService;
+import com.tcc.snakegame.dto.ChatRequest;
+import com.tcc.snakegame.dto.ChatResponse;
+import com.tcc.snakegame.service.GemmaService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

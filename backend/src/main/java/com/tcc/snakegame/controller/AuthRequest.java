@@ -1,4 +1,4 @@
-package com.tcc.chatbot.controller;
+﻿package com.tcc.snakegame.controller;
 
 public class AuthRequest {
     private String username;
@@ -27,3 +27,4 @@ public class AuthRequest {
         this.password = password;
     }
 }
+

@@ -1,7 +1,7 @@
-package com.tcc.chatbot.service;
+﻿package com.tcc.snakegame.service;
 
-import com.tcc.chatbot.model.User;
-import com.tcc.chatbot.repository.UserRepository;
+import com.tcc.snakegame.model.User;
+import com.tcc.snakegame.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -24,7 +24,7 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
         if(user == null) {
-            throw new UsernameNotFoundException("Usuário não encontrado");
+            throw new UsernameNotFoundException("UsuÃ¡rio nÃ£o encontrado");
         }
         GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
         return new org.springframework.security.core.userdetails.User(
@@ -32,3 +32,4 @@ public class UserService implements UserDetailsService {
         );
     }
 }
+

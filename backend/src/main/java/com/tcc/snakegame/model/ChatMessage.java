@@ -1,4 +1,4 @@
-package com.tcc.chatbot.model;
+﻿package com.tcc.snakegame.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -63,3 +63,4 @@ public class ChatMessage {
         this.timestamp = timestamp;
     }
 }
+

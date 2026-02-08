@@ -1,4 +1,4 @@
-package com.tcc.chatbot.util;
+﻿package com.tcc.snakegame.util;
 
 import io.jsonwebtoken.*;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -55,3 +55,4 @@ public class JwtUtil {
         return extractExpiration(token).before(new Date());
     }
 }
+

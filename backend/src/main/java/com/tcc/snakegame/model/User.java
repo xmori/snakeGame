@@ -1,4 +1,4 @@
-package com.tcc.chatbot.model;
+﻿package com.tcc.snakegame.model;
 
 import jakarta.persistence.*;
 
@@ -59,3 +59,4 @@ public class User {
         this.role = role;
     }
 }
+

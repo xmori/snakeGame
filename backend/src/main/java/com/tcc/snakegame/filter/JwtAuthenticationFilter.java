@@ -1,7 +1,7 @@
-package com.tcc.chatbot.filter;
+﻿package com.tcc.snakegame.filter;
 
-import com.tcc.chatbot.service.UserService;
-import com.tcc.chatbot.util.JwtUtil;
+import com.tcc.snakegame.service.UserService;
+import com.tcc.snakegame.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -39,7 +39,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             try{
                 username = jwtUtil.extractUsername(jwt);
             } catch (Exception e) {
-                System.out.println("Token inválido");
+                System.out.println("Token invÃ¡lido");
             }
         }
 
@@ -61,3 +61,4 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 }
+

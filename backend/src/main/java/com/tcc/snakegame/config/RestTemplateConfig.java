@@ -1,4 +1,4 @@
-package com.tcc.chatbot.config;
+﻿package com.tcc.snakegame.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,3 +11,4 @@ public class RestTemplateConfig {
         return new RestTemplate();
     }
 }
+

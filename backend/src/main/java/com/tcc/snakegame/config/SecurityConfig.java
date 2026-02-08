@@ -1,7 +1,7 @@
-package com.tcc.chatbot.config;
+﻿package com.tcc.snakegame.config;
 
-import com.tcc.chatbot.filter.JwtAuthenticationFilter;
-import com.tcc.chatbot.service.UserService;
+import com.tcc.snakegame.filter.JwtAuthenticationFilter;
+import com.tcc.snakegame.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -59,3 +59,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
+

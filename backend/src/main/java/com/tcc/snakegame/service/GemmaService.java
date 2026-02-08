@@ -1,7 +1,7 @@
-package com.tcc.chatbot.service;
+﻿package com.tcc.snakegame.service;
 
-import com.tcc.chatbot.model.ChatMessage;
-import com.tcc.chatbot.repository.ChatMessageRepository;
+import com.tcc.snakegame.model.ChatMessage;
+import com.tcc.snakegame.repository.ChatMessageRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +43,7 @@ public class GemmaService {
         log.info("Iniciando processamento da pergunta: '{}'", prompt);
 
         try {
-            String systemPrompt = "Você é um psicólogo assistente virtual.  Forneça respostas empáticas, informativas e concisas.  Seja cuidadoso ao lidar com tópicos sensíveis e sempre incentive o usuário a procurar ajuda profissional se necessário.";
+            String systemPrompt = "VocÃª Ã© um psicÃ³logo assistente virtual.  ForneÃ§a respostas empÃ¡ticas, informativas e concisas.  Seja cuidadoso ao lidar com tÃ³picos sensÃ­veis e sempre incentive o usuÃ¡rio a procurar ajuda profissional se necessÃ¡rio.";
 
             Map<String, Object> req = new HashMap<>();
             req.put("model", model);
@@ -57,7 +57,7 @@ public class GemmaService {
 
             HttpEntity<Map<String,Object>> requestEntity = new HttpEntity<>(req, headers);
 
-            log.debug("Enviando requisição para URL: {}", url + "/api/generate");
+            log.debug("Enviando requisiÃ§Ã£o para URL: {}", url + "/api/generate");
             ResponseEntity<Map> response = restTemplate.postForEntity(
                     url + "/api/generate", requestEntity, Map.class);
 
@@ -71,20 +71,20 @@ public class GemmaService {
             }
 
             log.warn("Resposta obtida sem o campo 'response': {}", response.getBody());
-            return "Erro ao obter resposta do chatbot.";
+            return "Erro ao obter resposta do snakegame.";
 
         } catch (HttpClientErrorException e) {
             log.error("Erro de cliente HTTP: {} - {}", e.getStatusCode(), e.getMessage());
             return "Erro ao comunicar com o modelo: " + e.getMessage();
         } catch (HttpServerErrorException e) {
             log.error("Erro do servidor Ollama: {} - {}", e.getStatusCode(), e.getMessage());
-            return "Serviço do chatbot indisponível no momento. Tente novamente mais tarde.";
+            return "ServiÃ§o do snakegame indisponÃ­vel no momento. Tente novamente mais tarde.";
         } catch (ResourceAccessException e) {
-            log.error("Erro de conexão ou timeout: {}", e.getMessage());
-            return "Não foi possível conectar ao serviço do chatbot. Verifique a conexão.";
+            log.error("Erro de conexÃ£o ou timeout: {}", e.getMessage());
+            return "NÃ£o foi possÃ­vel conectar ao serviÃ§o do snakegame. Verifique a conexÃ£o.";
         } catch (Exception e) {
-            log.error("Erro inesperado ao processar a requisição: ", e);
-            return "Erro ao obter resposta do chatbot.";
+            log.error("Erro inesperado ao processar a requisiÃ§Ã£o: ", e);
+            return "Erro ao obter resposta do snakegame.";
         }
     }
 }

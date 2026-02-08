@@ -1,8 +1,8 @@
-<div class="register-container">
+﻿<div class="register-container">
   <h2>Criar Conta</h2>
   <form [formGroup]="registerForm" (ngSubmit)="register()">
     <div class="form-group">
-      <label for="username">Usuário</label>
+      <label for="username">UsuÃ¡rio</label>
       <input
         type="text"
         id="username"
@@ -10,12 +10,12 @@
         [class.invalid]="username?.invalid && (username?.dirty || username?.touched)"
       >
       <div class="error-message">
-        <div *ngIf="username?.errors?.['required']">Usuário é obrigatório</div>
+        <div *ngIf="username?.errors?.['required']">UsuÃ¡rio Ã© obrigatÃ³rio</div>
         <div *ngIf="username?.errors?.['minlength']">
-          Mínimo de 3 caracteres
+          MÃ­nimo de 3 caracteres
         </div>
         <div *ngIf="username?.errors?.['pattern']">
-          Apenas letras, números e _
+          Apenas letras, nÃºmeros e _
         </div>
       </div>
     </div>
@@ -29,12 +29,12 @@
         [class.invalid]="password?.invalid && (password?.dirty || password?.touched)"
       >
       <div class="error-message">
-        <div *ngIf="password?.errors?.['required']">Senha é obrigatória</div>
+        <div *ngIf="password?.errors?.['required']">Senha Ã© obrigatÃ³ria</div>
         <div *ngIf="password?.errors?.['minlength']">
-          Mínimo de 6 caracteres
+          MÃ­nimo de 6 caracteres
         </div>
         <div *ngIf="password?.errors?.['pattern']">
-          Deve conter letras maiúsculas, minúsculas e números
+          Deve conter letras maiÃºsculas, minÃºsculas e nÃºmeros
         </div>
       </div>
     </div>
@@ -45,11 +45,11 @@
         type="password"
         id="confirmPassword"
         formControlName="confirmPassword"
-        [class.invalid]="registerForm?.errors?.['passwordMismatch']"
+        [class.invalid]="registerForm.errors?.['passwordMismatch']"
       >
       <div class="error-message">
-        <div *ngIf="registerForm?.errors?.['passwordMismatch']">
-          As senhas não coincidem
+        <div *ngIf="registerForm.errors?.['passwordMismatch']">
+          As senhas nÃ£o coincidem
         </div>
       </div>
     </div>
@@ -71,8 +71,10 @@
     </button>
 
     <div class="login-link">
-      Já tem conta?
-      <a (click)="goToLogin()">Faça login</a>
+      JÃ¡ tem conta?
+      <a (click)="goToLogin()">FaÃ§a login</a>
     </div>
   </form>
 </div>
+
+
