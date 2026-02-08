@@ -1,69 +1,46 @@
+﻿# Snake Game (Nokia Style)
 
-# Chatbot-Psicologico-TCC
+Um jogo da cobrinha inspirado nos celulares Nokia clássicos, feito em Angular. Interface retrô, controles por teclado e D‑pad, placar e melhor pontuação persistida no navegador.
 
-# Chatbot de Apoio Psicológico Inicial com IA
+## Como rodar localmente
 
-Este projeto é o Trabalho de Conclusão de Curso (TCC) que propõe o desenvolvimento de um sistema de chatbot utilizando Inteligência Artificial para fornecer suporte emocional inicial a usuários. O objetivo é oferecer uma ferramenta acessível e segura para primeiros atendimentos de acolhimento psicológico, respeitando limites éticos e sem substituir atendimento profissional.
-
-## 📚 Descrição
-
-O chatbot é integrado a um modelo de linguagem natural (LLM) local via Ollama, utilizando o modelo **Gemma 3:4b**. Ele é capaz de interpretar mensagens dos usuários e fornecer respostas empáticas e coerentes. Todo o histórico das conversas é armazenado em um banco de dados PostgreSQL, permitindo rastreabilidade e análise.
-
-## 🧩 Tecnologias Utilizadas
-
-- **Backend**: Java 17, Spring Boot, Spring Security, Spring AI
-- **Frontend**: Angular 18
-- **IA**: Ollama com modelo Gemma 3:4b
-- **Banco de Dados**: PostgreSQL
-- **Autenticação**: JWT (JSON Web Token)
-- **Containerização**: Docker, Docker Compose
-
-## 📐 Arquitetura
-
-A aplicação segue uma arquitetura **cliente-servidor com microsserviços**, estruturada em contêineres Docker:
-
-- **Frontend Angular** comunica-se com o backend via REST.
-- **Backend Spring Boot** expõe endpoints protegidos e se comunica com o modelo de IA.
-- **Ollama (container separado)** roda o modelo `gemma3:4b` localmente.
-- **PostgreSQL** persiste o histórico das conversas.
-
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-
-- Docker e Docker Compose instalados
-
-### Passos
-
-1. Clone este repositório:
+1. Instale dependências:
    ```bash
-   git clone https://github.com/MartiniCode90/chatbot-psicologico.git
-   cd chatbot-psicologico
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
+3. Abra no navegador:
+   ```
+   http://localhost:4200
+   ```
 
-2. Suba os containers:
-  docker-compose up --build
+## Controles
 
-3. Acesse o frontend:
+- Teclado: setas ou WASD
+- Espaço: iniciar/pausar
+- Botões na tela: D‑pad e Iniciar/Pausar
 
-  http://localhost:4200
+## Build de produção
 
-4. Acesse a API backend:
+```bash
+npm run build
+```
 
-  http://localhost:8080
+A saída fica em `dist/`.
 
-🧠 Funcionalidades
-   Cadastro e login de usuários
+## Deploy (site estático)
 
-   Geração de respostas com IA local
+Hospede a pasta `dist/` em qualquer host de sites estáticos (Netlify, Vercel, GitHub Pages, Firebase Hosting, etc.).
 
-   Armazenamento de mensagens no banco de dados
+## Tecnologias
 
-   Histórico de conversas por usuário
+- Angular
+- TypeScript
+- HTML Canvas
 
-   Autenticação e proteção via JWT
+## Licença
 
-⚠️ Aviso
-  Este chatbot não substitui atendimento psicológico profissional. Ele é apenas uma ferramenta de acolhimento inicial para suporte emocional leve.
-
-📄 Licença
-  Este projeto é de uso acadêmico e não deve ser utilizado comercialmente sem autorização prévia.
+Uso livre para fins educacionais.
